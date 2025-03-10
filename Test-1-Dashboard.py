@@ -19,8 +19,8 @@ col1, col2 = st.columns(2)  # Create 2 columns
 
 with col1:
     st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
-    st.metric("Retention Rate This Term", df_uni[(df_uni['Year']=='2024','Retention Rate (%)')].mean())
+    st.metric("Retention Rate This Term", df_uni[df_uni['Year']=='2024'].mean())
 
 with col2:
     st.plotly_chart(fig2, use_container_width=True)  # Second plot in second column
-    st.metric("Satisfaction Rate This Term", df_uni[(df_uni['Year']=='2024', 'Student Satisfaction (%)')].mean())
+    st.metric("Satisfaction Rate This Term", df_uni[df_uni['Year']=='2024'].mean())
