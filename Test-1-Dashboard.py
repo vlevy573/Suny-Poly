@@ -22,7 +22,7 @@ st.metric("Total Tasks Completed", df['Tasks Completed'].sum())
 
 with col1:
     st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
-    st.metric("Retention Rate This Term", df_uni[(df_uni['Year']=='2024','Retention Rate (%)'].mean())
+    st.metric("Retention Rate This Term", df_uni[(df_uni['Year']=='2024','Retention Rate (%)')].mean())
 
 with col2:
     st.plotly_chart(fig2, use_container_width=True)  # Second plot in second column
