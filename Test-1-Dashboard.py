@@ -17,9 +17,6 @@ fig2 = px.line(df_uni, x='Year', y='Student Satisfaction (%)', title ='Student S
 # Arrange the plots in a grid layout
 col1, col2 = st.columns(2)  # Create 2 columns
 
-st.metric("Average Hours Worked", f"{df['Hours Worked'].mean():.1f} hrs")
-st.metric("Total Tasks Completed", df['Tasks Completed'].sum())
-
 with col1:
     st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
     st.metric("Retention Rate This Term", df_uni[(df_uni['Year']=='2024','Retention Rate (%)')].mean())
