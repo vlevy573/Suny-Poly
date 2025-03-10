@@ -18,7 +18,7 @@ fig2 = px.line(df_uni, x='Year', y='Student Satisfaction (%)', title ='Student S
 col1, col2 = st.columns(2)  # Create 2 columns
 
 ret_2024 = df_uni[[df_uni['Year']=='2024']].mean()
-sat_2024 = df_uni[[df_uni['Year']=='2024', 'Year']].mean())
+sat_2024 = df_uni[[df_uni['Year']=='2024', 'Year']].mean()
 
 with col1:
     st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
